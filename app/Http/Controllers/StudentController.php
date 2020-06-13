@@ -8,21 +8,26 @@ class StudentController extends Controller
 {
     // Properties
     private $students;
+    private $genders;
 
     public function __construct(){
-        $this->students = config('students');
+        $this->students = config('students.students');
+        $this->genders = config('students.genders');
     }
 
     // Students Main Page
     public function index(){
-        $students = $this->students;
+        $data = [
+            'students' => $this->students,
+            'genders' => $this->genders
+        ];
 
-        return view('students.index', compact('students'));
+        return view('students.index', $data);
     }
 
     // Show Student
-    public function show($id){
-        $student = $this->searchStudent($id, $this->students);
+    public function show($slug){
+        $student = $this->searchStudent($slug, $this->students);
 
         if (!$student){
             abort('404');
@@ -33,9 +38,9 @@ class StudentController extends Controller
 
     // UTILITIES
     // Check by id if student exists
-    private function searchStudent($id, $array){
+    private function searchStudent($slug, $array){
         foreach ($array as $student){
-            if ($student['id'] == $id ){
+            if ($student['slug'] == $slug ){
                 return $student;
             }
         }

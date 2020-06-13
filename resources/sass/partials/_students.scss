@@ -25,9 +25,12 @@
 .student-img {
    max-width: 18%;
    margin-bottom: 30px;
-   box-shadow: 0px 0px 3px 3px $green;
 
    & > img {
       max-width: 100%;
    }
+}
+
+.students-filter {
+   margin-bottom: 20px;
 }
