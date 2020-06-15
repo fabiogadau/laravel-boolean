@@ -16190,8 +16190,8 @@ window.Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handle
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Fabio\Desktop\Boolean\laravel-boolean\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Fabio\Desktop\Boolean\laravel-boolean\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Fabio\Desktop\Prove lezione\Prova-35 - Laravel Boolean\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Fabio\Desktop\Prove lezione\Prova-35 - Laravel Boolean\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

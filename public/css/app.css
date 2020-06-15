@@ -34,8 +34,13 @@ p {
   padding: 1rem;
 }
 .navbar .navbar-brand {
-  text-decoration: none;
-  color: darkblue;
+  flex-basis: 10%;
+}
+.navbar .navbar-brand .header-logo {
+  max-width: 100%;
+}
+.navbar .navbar-brand .header-logo > img {
+  max-width: 100%;
 }
 .navbar > ul {
   display: flex;
@@ -46,23 +51,33 @@ p {
   padding: 0.8rem 1rem;
   text-decoration: none;
   font-size: 0.875em;
-  color: darkblue;
+  color: #1b3c59;
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s linear;
 }
 .navbar > ul a.active, .navbar > ul a:hover {
-  border-color: lightgreen;
+  border-color: #61ce4e;
+}
+.navbar > ul > li:last-child {
+  background-color: #61ce4e;
+  border-radius: 5px;
+}
+.navbar > ul > li:last-child > a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
 }
 
 /* FOOTER */
 .main-footer {
-  background-color: darkblue;
+  background-color: #1b3c59;
   color: #fff;
 }
 
 .nav-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 1140px;
   margin: 0 auto;
   padding: 1rem;
@@ -79,7 +94,15 @@ p {
 }
 .nav-footer ul li a {
   text-decoration: none;
+  font-weight: bold;
   color: #fff;
+}
+
+.footer-brand {
+  flex-basis: 16%;
+}
+.footer-brand > img {
+  max-width: 100%;
 }
 
 /* STUDENTS */
@@ -102,7 +125,7 @@ p {
 }
 .student:hover {
   background-color: #fff;
-  box-shadow: 0px 0px 5px 3px darkblue;
+  box-shadow: 0px 0px 5px 3px #1b3c59;
 }
 
 .student-img {
@@ -115,4 +138,36 @@ p {
 
 .students-filter {
   margin-bottom: 20px;
+}
+
+/* JUMBOTRON */
+.jumbo {
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.jumbo-text {
+  color: #1b3c59;
+}
+.jumbo-text h1 {
+  font-size: 52px;
+  font-weight: 500;
+}
+.jumbo-text p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.jumbo-text ul li {
+  list-style: inside;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.jumbo-img {
+  flex-basis: 65%;
+}
+.jumbo-img > img {
+  max-width: 100%;
 }

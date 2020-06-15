@@ -6,8 +6,15 @@
    padding: 1rem;
 
    .navbar-brand {
-      text-decoration: none;
-      color: $blue;
+      flex-basis: 10%;
+
+      .header-logo {
+         max-width: 100%;
+
+         & > img {
+            max-width: 100%;
+         }
+      }
    }
 
    & > ul {
@@ -26,6 +33,17 @@
          &.active,
          &:hover {
             border-color: $green;
+         }
+      }
+
+      & > li:last-child {
+         background-color: $green;
+         border-radius: 5px;
+
+         & > a {
+            font-size: 18px;
+            font-weight: 500;
+            color: $white;
          }
       }
    }

@@ -12,7 +12,11 @@
 
    <header class="main-header">
       <nav class="navbar">
-         <a href="{{ route('static-page.home') }}" class="navbar-brand">boolean</a>
+         <a href="{{ route('static-page.home') }}" class="navbar-brand">
+            <div class="header-logo">
+               <img src="https://www.boolean.careers/images/common/logo.png" alt="boolean-logo">
+            </div>
+         </a>
 
          <ul>
             <li><a

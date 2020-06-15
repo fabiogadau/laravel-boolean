@@ -1,6 +1,8 @@
    <footer class="main-footer">
       <nav class="nav-footer">
-         <div class="footer-brand">boolean</div>
+         <div class="footer-brand">
+            <img src="https://www.boolean.careers/images/common/logo-white.png" alt="boolean_footer-logo">
+         </div>
 
          <ul>
             <li><a href="{{ route('static-page.home') }}">Home</a></li>

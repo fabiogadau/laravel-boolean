@@ -1,0 +1,37 @@
+/* JUMBOTRON */
+.jumbo {
+   display: flex;
+   align-items: center;
+   padding: 100px 0;
+}
+
+.jumbo-text {
+   color: $blue;
+
+   h1 {
+      font-size: 52px;
+      font-weight: 500;
+   }
+
+   p {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 25px;
+   }
+
+   ul {
+      li {
+         list-style: inside;
+         font-size: 20px;
+         margin-bottom: 15px;
+      }
+   }
+}
+
+.jumbo-img {
+   flex-basis: 65%;
+
+   & > img {
+      max-width: 100%;
+   }
+}
