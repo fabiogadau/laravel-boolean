@@ -7,6 +7,8 @@
    <title>Laravel Boolean</title>
    {{-- Stylesheet --}}
    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+   {{-- Fontawesome --}}
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'/>
 </head>
 <body>
 

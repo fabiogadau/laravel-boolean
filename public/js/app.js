@@ -16093,7 +16093,16 @@ $(document).ready(function () {
   // Setup
   var filter = $('#filter');
   var apiUrl = window.location.protocol + '//' + window.location.host + '/api/students/genders';
-  var container = $('.students'); // Init Handlebars
+  var container = $('.students'); // Faq variables for slide down of faqs answers
+
+  var faqItem = $('.faq-item');
+  var faqIcon = $('.faq-item i');
+  var faqAnswer = $('.faq-answer'); // Slide down of faq answer by clicking its question
+
+  faqItem.click(function () {
+    $(this).find(faqIcon).toggleClass('fa-plus fa-minus');
+    $(this).find(faqAnswer).slideToggle(600).toggleClass('fixed');
+  }); // Init Handlebars
 
   var source = $('#student-template').html();
   var template = Handlebars.compile(source);
@@ -16190,8 +16199,8 @@ window.Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handle
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Fabio\Desktop\Prove lezione\Prova-35 - Laravel Boolean\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Fabio\Desktop\Prove lezione\Prova-35 - Laravel Boolean\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Fabio\Desktop\Boolean\laravel-boolean\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Fabio\Desktop\Boolean\laravel-boolean\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -10,6 +10,11 @@
 body {
   font-family: sans-serif;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  margin-top: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,10 +28,21 @@ p {
 .main-content {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 1rem 4rem;
+  padding: 0 1rem 0;
+}
+.main-content .footer-push {
+  flex-grow: 1;
+  z-index: -10;
 }
 
 /* HEADER */
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -80,7 +96,8 @@ p {
   align-items: center;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 5rem 0 1.5rem;
+  border-bottom: 1px solid #fff;
 }
 .nav-footer ul {
   list-style: none;
@@ -105,11 +122,42 @@ p {
   max-width: 100%;
 }
 
+.address-social {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social {
+  list-style: none;
+}
+.social > li {
+  display: inline-block;
+  margin-right: 2.5rem;
+}
+.social > li > a {
+  text-decoration: none;
+  font-size: 35px;
+  color: #fff;
+}
+.social > li:last-child {
+  margin-right: 0;
+}
+
+.address {
+  margin: 2rem 0 0;
+  color: #fff;
+}
+
 /* STUDENTS */
 .students {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 2rem 0;
 }
 
 .student {
@@ -126,6 +174,9 @@ p {
 .student:hover {
   background-color: #fff;
   box-shadow: 0px 0px 5px 3px #1b3c59;
+}
+.student .info {
+  color: #1b3c59;
 }
 
 .student-img {
@@ -170,4 +221,78 @@ p {
 }
 .jumbo-img > img {
   max-width: 100%;
+}
+
+.privacy {
+  padding: 2rem 0;
+}
+.privacy h1,
+.privacy h2,
+.privacy p {
+  color: #1b3c59;
+}
+
+.faq-title {
+  padding: 50px 0 50px 100px;
+  color: #1b3c59;
+}
+.faq-title > h1 {
+  font-size: 45px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.faq-title > p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.faqs {
+  display: flex;
+}
+
+.faq {
+  padding: 80px 80px 100px 100px;
+  flex-basis: 50%;
+  background-color: #eee;
+  color: #1b3c59;
+}
+.faq.after-course {
+  background-color: #1b3c59;
+  color: #fff;
+}
+.faq h2 {
+  font-weight: 500;
+  font-size: 35px;
+  margin-bottom: 3rem;
+}
+.faq ul {
+  list-style: none;
+}
+.faq ul > li {
+  font-size: 25px;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+}
+.faq ul > li > i {
+  cursor: pointer;
+}
+.faq ul > li > .faq-answer {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 1rem 0 1rem;
+  font-size: 18px;
+  background-color: #eee;
+  z-index: 10;
+}
+.faq ul > li > .faq-answer.after-course {
+  background-color: #1b3c59;
+}
+.faq ul > li:last-child {
+  margin-bottom: 0;
 }

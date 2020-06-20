@@ -7,6 +7,17 @@ $(document).ready(function(){
    var apiUrl = window.location.protocol + '//' + window.location.host + '/api/students/genders';
    var container = $('.students');
 
+   // Faq variables for slide down of faqs answers
+   var faqItem = $('.faq-item');
+   var faqIcon = $('.faq-item i');
+   var faqAnswer = $('.faq-answer');
+
+   // Slide down of faq answer by clicking its question
+   faqItem.click(function(){
+      $(this).find(faqIcon).toggleClass('fa-plus fa-minus');
+      $(this).find(faqAnswer).slideToggle(600).toggleClass('fixed');
+   });
+
    // Init Handlebars
    var source = $('#student-template').html();
    var template = Handlebars.compile(source);
